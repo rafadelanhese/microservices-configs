@@ -1,9 +1,14 @@
+server:
+  port: 9092
+  
 spring:
   application:
     name: book-service
-
-server:
-  port: 9092
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_CONTAINER}:8081/${MONGO_INITDB_DATABASE}
+      username: ${MONGO_INITDB_ROOT_USERNAME}
+      password: ${MONGO_INITDB_ROOT_PASSWORD}
 
 eureka:
   client:
