@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: book-service
+
+server:
+  port: 9092
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE} #http://eureka-server:8761/eureka
+    region: default
+    registryFetchIntervalSeconds: 5
