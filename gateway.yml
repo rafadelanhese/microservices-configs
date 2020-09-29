@@ -18,6 +18,12 @@ zuul:
       path: /eureka-server/**
       sensitive-headers: Set-Cookie,Authorization
       url: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE} #http://eureka-server:8761/eureka
+      
+zuul:
+  routes:
+    book-service:
+      path: /book-service/**
+      sensitive-headers: Set-Cookie,Authorization      
 
 hystrix:
   command:
