@@ -4,10 +4,15 @@ server:
 spring:
   application:
     name: book-service
-  datasource:
-    url: jdbc:mongodb://${MONGO_CONTAINER}:8081/${MONGO_INITDB_DATABASE}
-    username: ${MONGO_INITDB_ROOT_USERNAME}
-    password: ${MONGO_INITDB_ROOT_PASSWORD}
+  data:
+    mongodb:
+      host: ${MONGO_CONTAINER}
+      port: 8081
+      database: ${MONGO_INITDB_DATABASE}      
+      username: ${MONGO_INITDB_ROOT_USERNAME}
+      password: ${MONGO_INITDB_ROOT_PASSWORD}
+      repositories:
+        enabled: true
 
 eureka:
   client:
