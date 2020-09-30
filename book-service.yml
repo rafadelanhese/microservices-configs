@@ -6,7 +6,7 @@ spring:
     name: book-service
   data:
     mongodb:
-      uri: mongodb://${MONGO_CONTAINER}:8081/${MONGO_INITDB_DATABASE}
+      url: mongodb://${MONGO_CONTAINER}:8081/${MONGO_INITDB_DATABASE}
       username: ${MONGO_INITDB_ROOT_USERNAME}
       password: ${MONGO_INITDB_ROOT_PASSWORD}
 
