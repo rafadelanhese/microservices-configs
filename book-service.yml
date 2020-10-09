@@ -3,15 +3,7 @@ server:
   
 spring:
   application:
-    name: book-service
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:4200"
-            allowedMethods:
-            - GET
+    name: book-service   
   data:
     mongodb:
       host: ${MONGO_CONTAINER}
