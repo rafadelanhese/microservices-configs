@@ -1,14 +1,6 @@
 spring:
   application:
-    name: gateway
-  cloud:
-    gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:4200"
-            allowedMethods:
-            - GET
+    name: gateway  
 
 server:
   port: 9091
